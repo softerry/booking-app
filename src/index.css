@@ -88,3 +88,29 @@ code {
   width: 100%;
   margin: 10px;
 }
+
+/* sign up style */
+.signup-container{
+  width:100%;
+  height:100vh;
+  margin:0;
+}
+
+.signup-form{
+   width: 60vw;
+   max-width: 500px;
+   min-width: 300px;
+   margin: 0 auto;
+}
+.signup-container input{
+  
+}
+fieldset{
+  border: none;
+  padding:2rem 0;
+  border-bottom: 3px solid #3b3b4f;
+}
+.label-name{
+  display: block;
+  margin: 0.5rem 0;
+}
