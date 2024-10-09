@@ -16,58 +16,58 @@ function Signup (){
     return (
         <div className="signup-container">
             <form className="signup-form" href='#'>
-                <p> Already a member <a href=''> sign in</a></p>
-                <h2>Sign Up</h2>
-                <div className="">
-                <a href="#" className=""><Icon size={'20px'} icon={facebook}/></a>
-                <a href="#" className=""><Icon size={'20px'} icon={google}/></a>
+                <p className="signup-p-text"> Already a member <a href=''> sign in</a></p>
+                <h2 className="signup-h2">Sign Up</h2>
+                <div className="signup-social-icon">
+                <a href="#" className="media-icon"><Icon size={'20px'} icon={facebook}/></a>
+                <a href="#" className="media-icon"><Icon size={'20px'} icon={google}/></a>
                 </div>
                 <p className="signup-option">-- or -- </p>
                 <div className="signup-input-container">
-                    <label className="label-name">First Name:</label>
-                    <input type="text" placeholder="First Name" required/>
+                    <label className="label-text">First Name:</label>
+                    <input type="text" className="input-text" placeholder="First Name" required/>
                 </div>
                 <div className="signup-input-container">
-                    <label className="label-name">Last Name:</label>
-                    <input type="text" placeholder="Last Name" required/>
+                    <label className="label-text">Last Name:</label>
+                    <input type="text" className="input-text" placeholder="Last Name" required/>
                 </div>
                 <div className="signup-input-container">
-                    <label className="label-name">Others:</label>
-                    <input type="text" placeholder="Others"/>
+                    <label className="label-text">Others:</label>
+                    <input type="text"className="input-text" placeholder="Others"/>
                 </div>
                 <div className="signup-input-container">
-                    <label className="label-name">Date of Birth:</label>
-                    <input type='date' placeholder=""/>
+                    <label className="label-text">Date of Birth:</label>
+                    <input type='date' className="input-text" placeholder=""/>
                 </div>
 
-                <fieldset>
+                {/* <fieldset>
                 <div className="signup-input-container">
                     <label className="label-icon"><FontAwesomeIcon icon={faPhone} /></label>
-                    <input type='number' placeholder="Phone Number" required/>
+                    <input type='number' className='icon-text'placeholder="Phone Number" required/>
                 </div>
                     <div className="signup-input-container">
                     <label className="label-icon"><FontAwesomeIcon icon={faUser} /></label>
-                    <input type='text' placeholder="Username"/>
+                    <input type='text' className="icon-text" placeholder="Username"/>
                     </div>
                     <div className="signup-input-container">
                         <label className="label-icon"><FontAwesomeIcon icon={faEnvelope}/></label>
-                        <input type='email' placeholder="E-mail"/>
+                        <input type='email' className="icon-text" placeholder="E-mail"/>
                     </div>
                     <div className="signup-input-container">
                     <label className="label-icon"><FontAwesomeIcon icon={faLock}/></label>
-                        <input type='password'placeholder="Password"/>
+                        <input type='password' className='icon-text'  placeholder="Password"/>
                         <span><FontAwesomeIcon icon={faEye}/></span>
                     </div>
                     <div className="signup-input-container">
                         <label className="label-icon"><FontAwesomeIcon icon={faLock}/></label>
-                        <input type='password' placeholder="Repeat password"/>
-                        <span><FontAwesomeIcon icon={faEye}/></span>
+                        <input type='password' className="icon-text" placeholder="Repeat password"/>
+                        <span ><FontAwesomeIcon icon={faEye}/></span>
                     </div>
-                </fieldset>
-                <div className="signup-input-container">
+                </fieldset> */}
+                <div className="signup-checkbox">
                 <input type="checkbox"/> <label><a href="#">Terms and Condition</a></label>
                 </div>
-                <div>
+                <div className="signup-submit">
                     <input type="submit" value='submit'/>
                 </div>
         </form>

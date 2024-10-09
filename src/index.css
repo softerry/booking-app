@@ -73,6 +73,7 @@ code {
 .input-field input::placeholder{
   text-align: center;
 }
+/* for both signup and login */
 .media-icon{
   padding:15px;
   border: 1px solid;
@@ -102,15 +103,53 @@ code {
    min-width: 300px;
    margin: 0 auto;
 }
-.signup-container input{
-  
-}
+
 fieldset{
   border: none;
   padding:2rem 0;
   border-bottom: 3px solid #3b3b4f;
 }
-.label-name{
+.label-text{
   display: block;
   margin: 0.5rem 0;
+}
+.input-text{
+  margin:10px 0 0 0;
+  width:100%;
+  min-height:3em;
+}
+/* .icon-text{
+  margin:10px 0 0 0;
+  width:95%;
+  min-height:3em;
+}
+.label.icon{
+  padding: 5px;
+} */
+
+.signup-checkbox{
+  margin: 10px;
+}
+.signup-checkbox a{
+  text-decoration: none;
+}
+.signup-submit{
+  text-align: center;
+}
+.signup-submit input[type='submit']{
+    padding:5px 15px;
+    cursor:pointer;
+    width: 30%;
+    font-size: large;
+    text-transform: uppercase;
+}
+input::placeholder, input[type='date']{
+  text-transform: uppercase;
+}
+.signup-p-text, .signup-h2, .signup-social-icon, .signup-option{
+  text-align: center;
+}
+.signup-p-text a{
+  text-decoration: none;
+  text-transform: uppercase;
 }
