@@ -34,11 +34,12 @@ code {
   margin-bottom: 20px;
   color:#333;
 }
+
 .input-field{
   margin-bottom: 15px;
   position: relative;
 }
-.user-icon, .password-key, .password-eye{
+.user-icon, .password-key{
   position: absolute;
   top: 10px;
   left:10px;
@@ -103,7 +104,7 @@ code {
    min-width: 300px;
    margin: 0 auto;
 }
-/* fieldset style */
+
 
 label{
   display: block;
@@ -141,4 +142,14 @@ input::placeholder, input[type='date']{
 .signup-p-text a{
   text-decoration: none;
   text-transform: uppercase;
+}
+
+.signup-input-container{
+  position: relative;
+}
+.password-eye{
+  position: absolute;
+  top: 50px;
+  left:95%;
+  
 }
