@@ -8,18 +8,32 @@ import { faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
+import { faCircleCheck } from "@fortawesome/free-solid-svg-icons";
+import { faCircleXmark } from "@fortawesome/free-solid-svg-icons";
 
 
 
 function Signup (){
   // hook states 
     const [passwordEye, setPasswordEye] = useState('password');
-    const [passwordIcon, setPasswordIcon] = useState(faEye);
-    const [repeatPasswordIcon, setRepeatPasswordIcon]  = useState(faEye)
+    const [passwordIcon, setPasswordIcon] = useState(faEye); // default to faEye
+    const [repeatPasswordIcon, setRepeatPasswordIcon]  = useState(faEye) // default to faEye
     const [repeatPasswordEye, setRepeatPasswordEye] = useState('password');
     const [match, setMatch] = useState(null); // state to track if passwords match
     const [password, setPassword] = useState('password');
     const [repeatPassword, setRepeatPassword] = useState('password');
+    const [isLower, setIsLower] = useState(null);
+    const [isnumber, setIsNumber] = useState(null);
+    const [isUpper, setIsUpper] = useState(null);
+    const [isSpecial, setIsSpecial] = useState(null);
+    const [isLength, setIsLength] = useState(null);
+
+      // Regex for password validation
+      const lower = /(?=.*[a-z])/;
+      const num = /(?=.*\d)/;
+      const upper = /(?=.*[A-Z])/;
+      const special = /(?=.*[@$!%*?.&])/;
+      const length = /(.{8,})/;
 
     // handler for hide and show password
     const passwordToggleIcon = () =>{
@@ -45,8 +59,18 @@ function Signup (){
     }
     // handler for password input change
     const handlePasswordChange = (e) =>{
-        setPassword(e.target.value);
-        checkPasswordMatch(e.target.value, repeatPassword)
+        const value = e.target.value;
+        setPassword(value);
+        checkPasswordMatch(value, repeatPassword)
+
+    // Check if password matches the regex
+  
+    
+      setIsLower(lower.test(value));
+      setIsNumber(num.test(value));
+      setIsUpper(upper.test(value));
+      setIsSpecial(special.test(value));
+      setIsLength(length.test(value));
     }
 
     // handler for repeat password input change
@@ -103,13 +127,33 @@ function Signup (){
                     <label>Password</label>
                         <input  type={passwordEye} placeholder="Password" onChange={handlePasswordChange}/>
                         <span className="password-eye"><FontAwesomeIcon icon={passwordIcon} onClick={passwordToggleIcon}/></span>
+                        {/* Lowercase */}
+                        <span>
+                            {isLower === null ? null : isLower ? (<p style={{ color: 'green' }}><FontAwesomeIcon icon={faCircleCheck}/>Password is valid!</p>) : (<p style={{ color: 'red' }}><FontAwesomeIcon icon={faCircleXmark}/> Lower Case.</p>)}               
+                        </span>
+                        {/* UpperCase */}
+                        <span>
+                            {isUpper === null ? null : isUpper ? (<p style={{ color: 'green' }}><FontAwesomeIcon icon={faCircleCheck}/>Password is valid!</p>) : (<p style={{ color: 'red' }}><FontAwesomeIcon icon={faCircleXmark}/>Upper Case.</p>)}
+                        </span>
+                        {/* Number */}
+                        <span>
+                            {isnumber === null ? null : isnumber ? (<p style={{ color: 'green' }}><FontAwesomeIcon icon={faCircleCheck}/>Password is valid!</p>) : (<p style={{ color: 'red' }}><FontAwesomeIcon icon={faCircleXmark}/>Number.</p>)}
+                        </span>
+                        {/* special Character */}
+                        <span> 
+                            {isSpecial === null ? null : isSpecial ? (<p style={{ color: 'green' }}><FontAwesomeIcon icon={faCircleCheck}/>Password is valid!</p>) : (<p style={{ color: 'red' }}><FontAwesomeIcon icon={faCircleXmark}/>special.</p>)}
+                        </span>
+                        {/* password Length */}
+                        <span>
+                            {isLength === null ? null : isLength ? (<p style={{ color: 'green' }}><FontAwesomeIcon icon={faCircleCheck}/>Password is valid!</p>) : (<p style={{ color: 'red' }}><FontAwesomeIcon icon={faCircleXmark}/>Length.</p>)}
+                        </span>
                       
                 </div>
                 <div className="signup-input-container">
                         <label>Repeat Password</label>
                         <input type={repeatPasswordEye}  placeholder="Repeat password" onChange={handleRepeatPasswordChange}/>
                         <span className="password-eye" ><FontAwesomeIcon icon={repeatPasswordIcon} onClick={repeatPasswordToggleIcon}/></span>
-                        <span className="">{match === null ? (<p>Passwords must match in both fields</p>): match ? (<p>{<FontAwesomeIcon icon={faCheck}/>} Passwords Match</p>):(<p><FontAwesomeIcon icon={faXmark} />Passwords do not match!</p>)}</span>
+                        <span className="">{match === null ? (<p>Passwords must match in both fields</p>): match ? (<p>{<FontAwesomeIcon icon={faCheck} color="green"/>} Passwords Match</p>):(<p><FontAwesomeIcon icon={faXmark} color="red" />Passwords do not match!</p>)}</span>
                       
                 </div>
                 <div className="signup-checkbox">
