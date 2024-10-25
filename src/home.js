@@ -83,12 +83,7 @@ function Home (){
     <footer>    
         <p>&copy; 2024 Clinic for all. All Right Reserved.</p>
     </footer>
-</div>
-    
-
-  
-
-    
+</div>  
 );
 }
 
