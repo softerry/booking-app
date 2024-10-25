@@ -5,13 +5,14 @@ import './index.css';
 // import Signup from './signup';
 import EyeButton from './button';
 import Signup from './signup';
+import Home from './home';
 
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Signup/>
+    <Home/>
   </React.StrictMode>
 );
 
