@@ -185,7 +185,6 @@ nav ul li a:hover{
 }
 /* hero section */
 .hero{
-  /* background:url('clinic-bg.jpg') no-repeat center/cover; */
   height: 80vh;
   display: flex;
   flex-direction: column;
@@ -305,3 +304,5 @@ footer{
   text-align: center;
   padding:20px 0;
 }
+
+/* Chat box style */

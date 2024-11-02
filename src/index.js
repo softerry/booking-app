@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-// import Login from './login';
+import Login from './components/login';
 import './index.css';
-// import Signup from './signup';
-import Signup from './signup';
+import Signup from './components/signup';
 import Home from './home';
+
 
 
 
