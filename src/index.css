@@ -35,19 +35,23 @@ code {
   color:#333;
 }
 
-.input-field{
+.login-input-container{
   margin-bottom: 15px;
   position: relative;
 }
-.user-icon, .password-key{
+.login-input-container .user-icon{
   position: absolute;
   top: 10px;
   left:10px;
 }
-.password-eye{
-  left:290px;
+.login-input-container .password-eye{
+  position: absolute;
+  top: 10px;
+  left: 95%;
+ 
 }
-.input-field input{
+
+.login-input-container input{
   width: 100%;
   padding: 10px;
   border: 1px solid #ccc;
@@ -71,7 +75,7 @@ code {
 #login-btn:hover{
   background-color:#218838;
 }
-.input-field input::placeholder{
+.login-input-container input::placeholder{
   text-align: center;
 }
 /* for both signup and login */
@@ -106,7 +110,7 @@ code {
 }
 
 
-label{
+.signup-input-container label{
   display: block;
   margin: 0.5rem 0;
 }
@@ -120,11 +124,12 @@ label{
   margin-top: 10px;
   display: flex;
 }
-.signup-checkbox a{
+.signup-checkbox a{  
   text-decoration: none;
 }
 .signup-submit{
   text-align: center;
+  margin: 20px;
 }
 .signup-submit input[type='submit']{
     padding:5px 15px;
@@ -147,7 +152,7 @@ input::placeholder, input[type='date']{
 .signup-input-container{
   position: relative;
 }
-.password-eye{
+.signup-input-container .password-eye{
   position: absolute;
   top: 50px;
   left:95%;
@@ -272,30 +277,30 @@ nav ul li a:hover{
   background:#f4f4f4;
   text-align:center;
 }
-form{
+.contact-form{
   display: flex;
   flex-direction: column;
   max-width: 400px;
   margin: 0 auto;
 }
-form label{
+.contact-form label{
   margin-bottom:10px;
 }
-form input, form textarea{
+.contact-form input, form textarea{
   margin-bottom:20px;
   padding:10px;
   border:1px solid #ccc;
   border-radius: 4px;
 }
 
-form button{
+.contact-form button{
   padding:10px;
   background-color: #4caf50;
   color: white;
   cursor: pointer;
   border: none;
 }
-form button:hover{
+.contact-form button:hover{
   background-color: #45a049;
 }
 footer{

@@ -10,6 +10,8 @@ import { faXmark } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 import { faCircleCheck } from "@fortawesome/free-solid-svg-icons";
 import { faCircleXmark } from "@fortawesome/free-solid-svg-icons";
+import { NavBar } from "./navbar";
+import { Footer } from "./footer";
 
 
 
@@ -89,8 +91,11 @@ function Signup (){
     }
  
     return (
-        <div className="signup-container">
-            <form className="signup-form" href='#'>
+        <>
+        {/* Navigation bar */}
+            <NavBar/>
+     <div className="signup-container">
+            <form className="signup-form" action='#'>
                 <p className="signup-p-text"> Already a member <a href=''> sign in</a></p>
                 <h2 className="signup-h2">Sign Up</h2>
                 <div className="signup-social-icon">
@@ -157,14 +162,17 @@ function Signup (){
                       
                 </div>
                 <div className="signup-checkbox">
-                        <input type="checkbox"/> <label><a href="#">Terms and Condition</a></label>
+                        <input type="checkbox" id="check-box"/> <label><a href="#">Terms and Condition</a></label>
                 </div>
                 <div className="signup-submit">
                     <input type="submit" value='submit'/>
                 </div>
         </form>
-
+         {/* footer */}
+        <Footer/>
         </div>
+        </>
+        
         
     )
 }

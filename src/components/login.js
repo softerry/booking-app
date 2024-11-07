@@ -8,6 +8,9 @@ import { faKey } from "@fortawesome/free-solid-svg-icons";
 import { faEye } from '@fortawesome/free-regular-svg-icons';
 import { faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
+import { NavBar } from "./navbar";
+import { Footer } from "./footer";
+
 
 
 
@@ -27,7 +30,9 @@ function Login(){
         }
     }
     return(
-        <div id="main-login"> 
+        <>
+            <NavBar/>
+            <div id="main-login"> 
              <div className='login-container'>
                 {/* // login form */}
                  <form className="login-form">
@@ -38,12 +43,12 @@ function Login(){
                 </div>
                        <p className="login-option">-- or -- </p>
                         
-                <div className="input-field">
+                <div className="login-input-container">
                     <span className="user-icon"><FontAwesomeIcon icon={faUser} /></span>
                     <input type="text" id='username' name="username" placeholder="E-mail"required/>
                 </div>
-                <div className="input-field">
-                    <span className="password-key"><FontAwesomeIcon icon={faKey}/></span>
+                <div className="login-input-container">
+                    <span className="user-icon"><FontAwesomeIcon icon={faKey}/></span>
                     <input type={pass} id='password' name='password' placeholder="Password" required/>
                     <span className="password-eye"><FontAwesomeIcon icon={icon} onClick={toggleIcon}/></span>
                 </div>
@@ -56,6 +61,11 @@ function Login(){
         </div>
       
         </div>
+
+        {/* Footer */}
+        <Footer/>
+        </>
+        
        
     )
 }

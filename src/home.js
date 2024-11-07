@@ -1,6 +1,7 @@
 import { useState } from "react";
 import ContactForm from "./components/contact";
-import NavBar from "./components/navbar";
+import { NavBar } from "./components/navbar";
+import { Footer } from "./components/footer";
 
 
 function Home (){
@@ -8,15 +9,11 @@ function Home (){
 
 
 return(  
-<div>
-    <header>
-        {/* header section */}
-        <div className="logo">
-            <h1>clinic for all</h1>
-        </div>
-        {/* nav bar section */}
+<>
+
+{/* Header and nav bar section */}
       <NavBar/>
-    </header>
+    
     {/* hero section */}
     <section className="hero" id="home">
         <h2>Your health, Our Priority</h2>
@@ -60,13 +57,10 @@ return(
     </section>
     {/* Contact section */}
         <ContactForm/>
-        {/* footer section */}
-    <footer>    
-        <p>&copy; 2024 Clinic for all. All Right Reserved.</p>
-  
-    </footer>
+     {/* footer section */}
+        <Footer/>
 
-</div>  
+</>  
 );
 }
 

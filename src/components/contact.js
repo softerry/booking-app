@@ -2,24 +2,24 @@ import React from "react";
 
 
 
+
  const ContactForm = () =>{
-    return(
-          
+    return(  
         <>
-        <section id="contact">
+    <section id="contact">
         <h2>Contact Us</h2>
-        <form action="#">
-            <label for="name">Name:</label>
-            <input type="text" id="name"name="name" required/>
+            <form className="contact-form" action="#" >
+                <label for="name">Name:</label>
+                <input type="text" id="name"name="name" required/>
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required/>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required/>
 
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" required></textarea>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
 
-            <button type="submit">Send Message</button>
-        </form>
+                <button type="submit">Send Message</button>
+            </form>
     </section>
         {/* footer section */}
         </>
