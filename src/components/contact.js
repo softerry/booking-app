@@ -5,7 +5,7 @@ import React from "react";
 
  const ContactForm = () =>{
     return(  
-        <>
+ <>
     <section id="contact">
         <h2>Contact Us</h2>
             <form className="contact-form" action="#" >
@@ -21,8 +21,7 @@ import React from "react";
                 <button type="submit">Send Message</button>
             </form>
     </section>
-        {/* footer section */}
-        </>
+ </>
 
     )
 }

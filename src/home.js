@@ -2,6 +2,7 @@ import { useState } from "react";
 import ContactForm from "./components/contact";
 import { NavBar } from "./components/navbar";
 import { Footer } from "./components/footer";
+import {ImageSlider} from "./components/imageSlider";
 
 
 function Home (){
@@ -15,11 +16,12 @@ return(
       <NavBar/>
     
     {/* hero section */}
-    <section className="hero" id="home">
-        <h2>Your health, Our Priority</h2>
+    {/* <section className="hero" id="home"> */}
+        <ImageSlider/>
+        {/* <h2>Your health, Our Priority</h2>
         <p>Providing quality healthcare to families and individual.</p>
-        <a href="#booking" className="booking-btn">Booking an appointment</a> 
-    </section>
+        <a href="#booking" className="booking-btn">Booking an appointment</a>  */}
+    {/* </section> */}
     {/* About section */}
     <section id='about'>
         <h2>About Us</h2>

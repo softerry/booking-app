@@ -184,23 +184,28 @@ nav ul li a{
   color:white;
   text-decoration: none;
   font-weight: bolder;
+  text-transform: uppercase;
 }
 nav ul li a:hover{
   text-decoration:underline;
 }
 /* hero section */
-.hero{
-  height: 80vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.slider-container{
+  position: relative;
+  color:white;
+}
+.slider-text{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   text-align: center;
 }
-.hero h2{
+
+.slider-text h2{
   font-size: 3em;
 }
-.hero p{
+.slider-text p{
   font-size: 1.5em;
 }
 .booking-btn{
